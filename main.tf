@@ -19,16 +19,17 @@ provider "local" {}
 provider "random" {}
 
 # Generate a unique ID for the application
-# Issue 2: Syntax error - missing quotes around resource name
+# Issue 2: Syntax error
 resource "random_id" app_id {
   byte_length = 4
 }
 
-# Application configuration
+# Application configuration.
+# Issue 3: Missing variable declaration
 resource "local_file" "app_config" {
   filename = "config/${var.environment}/app.json"
   
-  # Issue 3: The JSON is valid but the variable reference is wrong
+
   content = jsonencode({
     app_name    = var.app_name
     environment = var.environment
@@ -42,6 +43,7 @@ resource "local_file" "app_config" {
 }
 
 # Web server configuration
+### Issue 4: Missing dependency
 resource "local_file" "web_config" {
   filename = "config/${var.environment}/web.conf"
   
@@ -56,6 +58,4 @@ resource "local_file" "web_config" {
     }
   EOT
   
-  # Issue 4: This should depend on app_config to ensure proper creation order
-  # depends_on = [local_file.app_config]
 } 

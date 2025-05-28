@@ -1,4 +1,4 @@
-# Example variable values
 # Copy this to terraform.tfvars and update as needed
-
-# environment = "dev" 
+unused_variable = "unused"
+vpc_cidr = "10.0.0.0/16"
+admin_password = "admin123"

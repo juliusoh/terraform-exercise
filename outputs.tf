@@ -5,10 +5,10 @@ output "app_id" {
   value       = random_id.app_id.hex
 }
 
-# Issue: This output references the wrong attribute name
+# Issue 5: This output references the wrong attribute name
 output "config_file_path" {
   description = "Path to the application config file"
-  value       = local_file.app_config.file_path  # Should be 'filename'
+  value       = local_file.app_config.file_path 
 }
 
 output "web_config_path" {

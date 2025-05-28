@@ -4,10 +4,6 @@
 .terraform/
 .terraform.lock.hcl
 
-# Variable files that might contain secrets
-terraform.tfvars
-*.auto.tfvars
-
 # Generated files from the exercise
 config/
 *.conf

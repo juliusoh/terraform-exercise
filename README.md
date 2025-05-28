@@ -10,7 +10,7 @@ This repository contains a broken Terraform configuration for a simple web appli
 2. Install Terraform (version 1.5+ recommended)
 3. Navigate to the project directory
 4. Fix the issues in the Terraform configuration
-5. Run `terraform init`, `terraform plan`, and `terraform apply`
+5. Run `terraform init`, `terraform plan --var-file=terraform.tfvars`, and `terraform apply --var-file=terraform.tfvars`
 
 ## Scenario
 

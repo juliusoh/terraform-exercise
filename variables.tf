@@ -35,18 +35,11 @@ variable "vpc_cidr" {
   description = "CIDR block for VPC"
   type        = string
   # Issue 7: Invalid CIDR format
-  default = "10.0.0.0"
 }
 
-# Issue 8: Sensitive variable without proper handling
+# Bonus: Sensitive variable without proper handling
 variable "admin_password" {
   description = "Admin password"
   type        = string
-  default     = "admin123"  # Issue 9: Hardcoded password
+  default     = "admin123"  # Bonus: Hardcoded password
 } 
-
-variable "environment" {
-  description = "Environment name"
-  type        = string
-  default     = "dev"
-}
