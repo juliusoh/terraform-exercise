@@ -1,4 +1,4 @@
-# Terraform Interview Exercise - Intermediate Level
+# Terraform Interview Exercise 
 
 ## Overview
 
