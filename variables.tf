@@ -6,8 +6,6 @@ variable "app_name" {
   default     = "myapp"
 }
 
-# Issue: Missing variable "environment" that's used in main.tf
-
 variable "app_port" {
   description = "Port for the application"
   type        = number
@@ -16,28 +14,21 @@ variable "app_port" {
 
 variable "database_port" {
   description = "Port for the database"
-  # Issue 3: Wrong type - should be number
   type    = string
   default = "5432"
 }
 
-# Issue 4: Variable declared but never used
 variable "unused_variable" {
   description = "This variable is never used"
   type        = string
   default     = "unused"
 }
 
-# Issue 5: Missing variable for api_key that's used in main.tf
-
-# Issue 6: Variable with invalid default value
 variable "vpc_cidr" {
   description = "CIDR block for VPC"
   type        = string
-  # Issue 7: Invalid CIDR format
 }
 
-# Bonus: Sensitive variable without proper handling
 variable "admin_password" {
   description = "Admin password"
   type        = string
