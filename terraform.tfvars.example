@@ -1,0 +1,4 @@
+# Example variable values
+# Copy this to terraform.tfvars and update as needed
+
+# environment = "dev" 
