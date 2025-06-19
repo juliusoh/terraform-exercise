@@ -1,39 +1,63 @@
-# Terraform Interview Exercise 
+# Terraform Configuration Exercise
 
 ## Overview
 
-This repository contains a broken Terraform configuration for a simple web application. Your task is to identify and fix the issues to make the configuration work properly.
+This repository contains a Terraform configuration for a simple web application that needs some improvements. Your task is to identify and fix the issues to make the configuration work properly and follow best practices.
 
 ## Setup Instructions
 
 1. Clone this repository
 2. Install Terraform (version 1.5+ recommended)
 3. Navigate to the project directory
-4. Fix the issues in the Terraform configuration
-5. Run `terraform init`, `terraform plan --var-file=terraform.tfvars`, and `terraform apply --var-file=terraform.tfvars`
+4. Create a `terraform.tfvars` file from the example file
+5. Fix the issues in the Terraform configuration
+6. Run `terraform init`, `terraform plan`, and `terraform apply`
 
 ## Scenario
 
-You're working on a simple web application configuration that needs:
+You're working on a web application configuration that demonstrates your understanding of:
 
-- Basic application configuration files
-- Environment-specific settings
-- Proper resource dependencies
+- Terraform best practices and syntax
+- Variable management and validation
+- Resource dependencies and state management
+- Output configuration
+- Security considerations
 
 ## Expected Fixes
 
-There are **3-4 issues** in this codebase that need to be fixed:
+There are several issues in this codebase that need to be addressed:
 
-- Syntax errors
-- Missing variables
-- Resource dependency issues
-- Output configuration problems
+1. Provider Configuration
+
+   - Missing version constraints
+   - Syntax errors
+
+2. Variable Management
+
+   - Unused variables that should be removed
+   - Missing variable validations
+   - Insecure default values
+
+3. Resource Configuration
+
+   - Dependency issues
+   - Missing required attributes
+   - Incorrect file paths
+
+4. Output Configuration
+   - Incorrect attribute references
+   - Missing descriptions
 
 ## Success Criteria
 
-- All Terraform commands (`init`, `plan`, `apply`) run without errors
-- Resources are created with proper dependencies
-- Outputs display correct information
+Your solution should demonstrate:
+
+- Clean, error-free Terraform configuration
+- Proper variable validation and security practices
+- Correct resource dependencies
+- Working outputs
+- Removal of unnecessary code
+- Addition of helpful comments where needed
 
 ## Note
 
@@ -41,4 +65,4 @@ This exercise uses local providers and doesn't provision real infrastructure. Yo
 
 ## Time Expectation
 
-This exercise should take 10-15 minutes for an intermediate-level engineer.
+This exercise should take 15-20 minutes for an intermediate-level Terraform engineer.
